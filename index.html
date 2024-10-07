@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elegant Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM4gJ8PbZR5huj9Sv4n3FJW2n7XnUn3s9xZNhX" crossorigin="anonymous">
+</head>
+
+<body>
+  <audio id="background-audio" autoplay loop>
+    <source src="sounds/audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <section class="header" data-aos="fade-up">
+      <div class="header-frame">
+        <h1 style="font-family: 'Cinzel', serif;">Melaspas & Metatah</h1>
+        <p>Selasa, 15 Oktober 2024</p>
+      </div>
+    </section>
+
+    <section class="intro" data-aos="fade-up" data-aos-delay="200">
+      <h2 style="font-family: 'Cinzel', serif;">Om Swastiastu</h2>
+      <p>Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa yang Maha Kuasa kami bermaksud mengundang
+        Bapak/Ibu/Saudara/i pada Upacara Melaspas & Metatah</p>
+      <h3>Ni Putu Krisnadevi, S.Tr.Par.</h3>
+      <h3>I Made Deva Kerti Wijaya</h3>
+      <h3>Ni Komang Kartika Maharani</h3>
+    </section>
+
+    <section class="event-details" data-aos="fade-up" data-aos-delay="400">
+      <div class="event-frame">
+        <h2 style="font-family: 'Cinzel', serif;">Waktu & Tempat</h2>
+        <p>Selasa, 15 Oktober 2024</p>
+        <p>Pukul 15.00 WITA - Selesai</p>
+        <p>Banjar Pangkung Liplip, Kaliakah, Negara</p>
+        <button onclick="window.location.href='https://maps.app.goo.gl/vry2YXhckcwqJ4iR6'">Map Lokasi Acara</button>
+      </div>
+    </section>
+
+    <section class="countdown" data-aos="fade-up" data-aos-delay="600">
+      <h2 style="font-family: 'Cinzel', serif;">Menuju Acara</h2>
+      <div class="countdown-timer">
+        <div class="time-box"><span id="days">84</span> Hari</div>
+        <div class="time-box"><span id="hours">21</span> Jam</div>
+        <div class="time-box"><span id="minutes">16</span> Menit</div>
+        <div class="time-box"><span id="seconds">52</span> Detik</div>
+      </div>
+    </section>
+
+    <section class="gift-section" data-aos="fade-up" data-aos-delay="700">
+      <button id="giftButton" class="gift-button">
+        🎁 Kirim Gift
+      </button>
+    </section>
+
+    <div id="giftModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Nomor Rekening</h2>
+        <p>A.n I MADE DEVA KERTI WIJAYA</p>
+        <p>Nomor Rekening: 1234567890</p>
+      </div>
+    </div>
+
+    <section class="rsvp" data-aos="fade-up" data-aos-delay="800">
+      <h2 style="font-family: 'Cinzel', serif;">Mohon Doa Restu</h2>
+      <form>
+        <input type="text" placeholder="Masukkan nama kamu" required>
+        <textarea placeholder="Berikan ucapanmu" required></textarea>
+        <button type="submit">Kirim Ucapan</button>
+      </form>
+      <div class="comments">
+        <!-- Comments will be dynamically added here -->
+      </div>
+    </section>
+
+    <footer data-aos="fade-up" data-aos-delay="1000">
+      <p>Undangan Digital by MadeDeva - Matur Suksma</p>
+    </footer>
+
+    <div class="sound-icon" id="soundIcon">
+      <i class="fa fa-volume-up"></i>
+    </div>
+
+  </div>
+
+  <script>
+    const audio = document.getElementById('background-audio'); // Updated ID
+    const soundIcon = document.getElementById('soundIcon');
+
+    soundIcon.addEventListener('click', function () {
+      if (audio.paused) {
+        audio.play();
+        soundIcon.innerHTML = '<i class="fa fa-volume-up"></i>'; // Change icon to sound on
+      } else {
+        audio.pause();
+        soundIcon.innerHTML = '<i class="fa fa-volume-off"></i>'; // Change icon to sound off
+      }
+    });
+  </script>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+</body>
+
+</html>
