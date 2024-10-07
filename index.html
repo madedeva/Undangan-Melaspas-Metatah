@@ -28,7 +28,6 @@
     <section class="header" data-aos="fade-up">
       <div class="header-frame">
         <h1 style="font-family: 'Cinzel', serif;">Melaspas & Metatah</h1>
-        <p>Selasa, 15 Oktober 2024</p>
       </div>
     </section>
 
@@ -99,7 +98,7 @@
   </div>
 
   <script>
-    const audio = document.getElementById('background-audio');
+    const audio = document.getElementById('background-audio'); // Updated ID
     const soundIcon = document.getElementById('soundIcon');
 
     soundIcon.addEventListener('click', function () {
@@ -109,15 +108,6 @@
       } else {
         audio.pause();
         soundIcon.innerHTML = '<i class="fa fa-volume-off"></i>'; // Change icon to sound off
-      }
-    });
-
-    // Play audio when the icon is clicked
-    soundIcon.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play().catch(error => {
-          console.error('Audio play error:', error);
-        });
       }
     });
   </script>
