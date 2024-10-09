@@ -1,11 +1,16 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fbf8f3;
     color: #5c4a3d;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-image: url('images/pattern.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('images/pattern.jpg');
+    background-color: rgba(165, 42, 42, 0.2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
